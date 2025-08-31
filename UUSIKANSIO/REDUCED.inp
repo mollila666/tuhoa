@@ -1,0 +1,37 @@
+*Heading
+
+** 
+** Name: BC-1 Type: Symmetry/Antisymmetry/Encastre
+*Boundary
+Set-2, PINNED
+** ----------------------------------------------------------------
+** 
+** STEP: Step-1
+** 
+*Step, name=Step-1, nlgeom=NO, perturbation, unsymm=YES
+*Steady State Dynamics, direct, frequency scale=LINEAR, friction damping=NO
+1., 2000., 2000, 1.
+** 
+** LOADS
+** 
+** Name: Load-2   Type: Gravity
+*Dload, amplitude=HZ, real
+, GRAV, 9810., 0., 0., 1.
+** 
+** OUTPUT REQUESTS
+** 
+** 
+** FIELD OUTPUT: F-Output-1
+** 
+*Output, field, variable=PRESELECT
+** 
+** HISTORY OUTPUT: H-Output-2
+** 
+*Output, history
+*Node Output, nset=load
+U1, U2, U3
+** 
+** HISTORY OUTPUT: H-Output-1
+** 
+*Output, history, variable=PRESELECT
+*End Step
